@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace data_lib
 {
-    class linq_filters
+  public  class linq_filters
     {
         private List<car> _cars;
 

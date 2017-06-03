@@ -1,6 +1,5 @@
-D:\Projects\linq-samples\linq-tpl\data-lib\bin\Debug\data-lib.exe.config
-D:\Projects\linq-samples\linq-tpl\data-lib\obj\Debug\data-lib.csprojResolveAssemblyReference.cache
 D:\Projects\linq-samples\linq-tpl\data-lib\bin\Debug\fuel.csv
+D:\Projects\linq-samples\linq-tpl\data-lib\bin\Debug\data-lib.exe.config
 D:\Projects\linq-samples\linq-tpl\data-lib\bin\Debug\data-lib.exe
 D:\Projects\linq-samples\linq-tpl\data-lib\bin\Debug\data-lib.pdb
 D:\Projects\linq-samples\linq-tpl\data-lib\obj\Debug\data-lib.exe

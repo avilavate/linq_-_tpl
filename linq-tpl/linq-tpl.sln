@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data-lib", "data-lib\data-lib.csproj", "{E76483A9-AD65-47B0-9EC1-503A6E4A2E33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app-tpl", "app-tpl\app-tpl.csproj", "{D2AC8418-2F92-4DEE-BCFC-1F7397E0402E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E76483A9-AD65-47B0-9EC1-503A6E4A2E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E76483A9-AD65-47B0-9EC1-503A6E4A2E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E76483A9-AD65-47B0-9EC1-503A6E4A2E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2AC8418-2F92-4DEE-BCFC-1F7397E0402E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2AC8418-2F92-4DEE-BCFC-1F7397E0402E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2AC8418-2F92-4DEE-BCFC-1F7397E0402E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2AC8418-2F92-4DEE-BCFC-1F7397E0402E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,16 @@
+D:\Projects\linq-samples\linq-tpl\app-tpl\bin\Debug\fuel.csv
+D:\Projects\linq-samples\linq-tpl\app-tpl\bin\Debug\app-tpl.exe.config
+D:\Projects\linq-samples\linq-tpl\app-tpl\bin\Debug\app-tpl.exe
+D:\Projects\linq-samples\linq-tpl\app-tpl\bin\Debug\app-tpl.pdb
+D:\Projects\linq-samples\linq-tpl\app-tpl\bin\Debug\data-lib.exe
+D:\Projects\linq-samples\linq-tpl\app-tpl\bin\Debug\data-lib.pdb
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\app-tpl.csprojResolveAssemblyReference.cache
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\MainWindow.baml
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\MainWindow.g.cs
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\App.g.cs
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\app-tpl_MarkupCompile.cache
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\app-tpl.g.resources
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\app_tpl.Properties.Resources.resources
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\app-tpl.csproj.GenerateResource.Cache
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\app-tpl.exe
+D:\Projects\linq-samples\linq-tpl\app-tpl\obj\Debug\app-tpl.pdb

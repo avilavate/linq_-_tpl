@@ -4,14 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace data_lib
 {
-    public static class csv_parser
+    internal static class csv_parser
     {
         //Model Year,Division,Carline,Eng Displ,# Cyl,City FE,Hwy FE,Comb FE
-        public static List<car> ParseCars(string path)
+        public static List<car> ParseCars(string path=@"./fuel.csv")
         {
+            //To Test TPL
+            Thread.Sleep(3000);
             var lines = File.ReadAllLines(path);
             var q = lines.
                     Skip(1).
