@@ -43,6 +43,11 @@ namespace data_lib
 
             return q.ToList<car>();
         }
+
+        public int GetTotal()
+        {
+            return this._cars.Count();
+        }
     }
 
 }

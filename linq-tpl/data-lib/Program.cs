@@ -19,6 +19,8 @@ namespace data_lib
                 Console.WriteLine(car.Name + " : " + car.Combined_FE);
             }
 
+            Console.WriteLine(ops.GetTotal());
+
             Console.Read();
         }
     }
