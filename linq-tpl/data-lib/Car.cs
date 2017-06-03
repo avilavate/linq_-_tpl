@@ -7,7 +7,6 @@ namespace data_lib
 {
     public class car
     {
-
         public string Year { get; set; }
         public string Name { get; set; }
         public string CarLine { get; set; }
