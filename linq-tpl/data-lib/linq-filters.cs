@@ -36,8 +36,16 @@ namespace data_lib
                 result.Min = Math.Min(b.Combined_FE, a.Min);
 
                 return result;
-            });
-            return new FuelStatistics { Min = q.Min, Max = q.Max, Avg = q.Avg / this._cars.Count() };
+            },
+            (a) =>
+            {
+                a.Avg = result.Avg / this._cars.Count();
+                a.Max = result.Max;
+                a.Min = result.Min;
+                return a;
+            }
+            );
+            return q;
         }
 
         public List<car> SearchByFuelEff(string name)
