@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace data_lib
@@ -21,6 +22,22 @@ namespace data_lib
                     select car;
 
             return q.ToList<car>();
+        }
+
+        public FuelStatistics Aggregate()
+        {
+            var result = new FuelStatistics();
+            var q= this._cars.Aggregate(new FuelStatistics(), (a, b) =>
+            {
+                
+
+                result.Avg += b.Combined_FE;
+                result.Max = Math.Max(b.Combined_FE, a.Max);
+                result.Min = Math.Min(b.Combined_FE, a.Min);
+
+                return result;
+            });
+            return new FuelStatistics { Min = q.Min, Max = q.Max, Avg = q.Avg / this._cars.Count() };
         }
 
         public List<car> SearchByFuelEff(string name)
@@ -76,7 +93,7 @@ namespace data_lib
                  }
                  );
 
-            return q.OrderByDescending(perfByManu=>perfByManu.Max).ToList();
+            return q.OrderByDescending(perfByManu => perfByManu.Max).ToList();
         }
 
         public List<CarManufacturer> JoinManufacturerCar()
@@ -84,22 +101,23 @@ namespace data_lib
             var q = from car in this._cars
                     join m in this._manufacturer on car.Name equals m.Manufacturer
                     select new CarManufacturer
-                                              {
-                                                  Manufacturer = m.Manufacturer,
-                                                  Country = m.Country,
-                                                  Name=car.CarLine+ "" +car.Engin_Displacement,
-                                                  Economy = car.Combined_FE
-                                              };
+                    {
+                        Manufacturer = m.Manufacturer,
+                        Country = m.Country,
+                        Name = car.CarLine + "" + car.Engin_Displacement,
+                        Economy = car.Combined_FE
+                    };
 
-            var q1 = this._manufacturer.Join(this._cars, 
-                manufacturer => manufacturer.Manufacturer, 
+            var q1 = this._manufacturer.Join(this._cars,
+                manufacturer => manufacturer.Manufacturer,
                 c => c.Name,
-                (m, c) => new CarManufacturer {
-                                                Country=m.Country,
-                                                Manufacturer=m.Manufacturer,
-                                                Name=c.CarLine+ " "+c.Engin_Displacement,
-                                                Economy=c.Combined_FE
-                     });
+                (m, c) => new CarManufacturer
+                {
+                    Country = m.Country,
+                    Manufacturer = m.Manufacturer,
+                    Name = c.CarLine + " " + c.Engin_Displacement,
+                    Economy = c.Combined_FE
+                });
             return q1.ToList();
         }
     }
@@ -112,7 +130,8 @@ namespace data_lib
 
         public FuelStatistics()
         {
-            this.Max = this.Min = 0;
+            this.Max = int.MinValue;
+            this.Min = int.MaxValue;
             this.Avg = 0.0;
         }
     }
