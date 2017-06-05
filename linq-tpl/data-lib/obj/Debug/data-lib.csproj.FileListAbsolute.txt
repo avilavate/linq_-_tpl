@@ -4,3 +4,10 @@ D:\Projects\linq-samples\linq-tpl\data-lib\bin\Debug\data-lib.exe
 D:\Projects\linq-samples\linq-tpl\data-lib\bin\Debug\data-lib.pdb
 D:\Projects\linq-samples\linq-tpl\data-lib\obj\Debug\data-lib.exe
 D:\Projects\linq-samples\linq-tpl\data-lib\obj\Debug\data-lib.pdb
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\data-lib.exe.config
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\obj\Debug\data-lib.exe
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\obj\Debug\data-lib.pdb
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\fuel.csv
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\data-lib.exe
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\data-lib.pdb
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\obj\Debug\data-lib.csprojResolveAssemblyReference.cache

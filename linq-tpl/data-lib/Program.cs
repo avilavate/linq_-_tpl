@@ -18,6 +18,12 @@ namespace data_lib
             {
                 Console.WriteLine(car.Name + " : " + car.Combined_FE);
             }
+            var q1 = ops.PerformanceGroupByManufacturer();
+            foreach (var perfByM in q1)
+            {
+                Console.WriteLine($"{perfByM.Manufacturer} : Avg: {perfByM.Avg} Min: {perfByM.Min} Max: {perfByM.Max}" );
+
+            }
 
             Console.WriteLine(ops.GetTotal());
 

@@ -5,8 +5,26 @@
     <Grid>
         <TextBox Name="path" HorizontalAlignment="Left" Height="23" Margin="67,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237" RenderTransformOrigin="1.125,-0.123"/>
         <Button Content="Load Data (TPL)" HorizontalAlignment="Left" Margin="304,22,0,0" VerticalAlignment="Top" Width="106" Height="23" Click="Button_Click"/>
-        <Label Name="Total" Content="" HorizontalAlignment="Left" Margin="157,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.074,-0.192" Width="167"/>
+
         <Button Content="No TPL" HorizontalAlignment="Left" Margin="415,22,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click_1"/>
+
+        <Grid HorizontalAlignment="Left" Height="188" Margin="338,94,0,0" VerticalAlignment="Top" Width="130">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button  Grid.Row="0" Grid.Column="0" Name="Aggr" Click="Aggr_Click">Get Statistics</Button>
+            <Button  Grid.Row="1" Grid.Column="0">Other Operations</Button>
+
+        </Grid>
+
+        <StackPanel>
+            <Label x:Name="Total" Content="" HorizontalAlignment="Left" Margin="66,62,0,20" VerticalAlignment="Top" RenderTransformOrigin="0.074,-0.192" Width="258" Height="25"/>
+            <TextBlock x:Name="Result" Text="" TextWrapping="Wrap" Width="250" Margin="0,0,133,0" Height="172" />
+        </StackPanel>
 
     </Grid>
 </Window>
