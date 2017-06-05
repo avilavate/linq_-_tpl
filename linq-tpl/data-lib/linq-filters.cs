@@ -84,13 +84,23 @@ namespace data_lib
             var q = from car in this._cars
                     join m in this._manufacturer on car.Name equals m.Manufacturer
                     select new CarManufacturer
-                    {
-                        Manufacturer = m.Manufacturer,
-                        Country = m.Country,
-                        Name=car.CarLine+ "" +car.Engin_Displacement,
-                        Economy = car.Combined_FE
-                    };
-            return q.ToList();
+                                              {
+                                                  Manufacturer = m.Manufacturer,
+                                                  Country = m.Country,
+                                                  Name=car.CarLine+ "" +car.Engin_Displacement,
+                                                  Economy = car.Combined_FE
+                                              };
+
+            var q1 = this._manufacturer.Join(this._cars, 
+                manufacturer => manufacturer.Manufacturer, 
+                c => c.Name,
+                (m, c) => new CarManufacturer {
+                                                Country=m.Country,
+                                                Manufacturer=m.Manufacturer,
+                                                Name=c.CarLine+ " "+c.Engin_Displacement,
+                                                Economy=c.Combined_FE
+                     });
+            return q1.ToList();
         }
     }
 
