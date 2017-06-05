@@ -42,16 +42,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="car.cs" />
+    <Compile Include="CarManufacturer.cs" />
     <Compile Include="csv_parser.cs" />
     <Compile Include="linq-filters.cs" />
+    <Compile Include="manufacturer.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\manufacturers.csv" />
     <None Include="fuel.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="manufacturers.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cars.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

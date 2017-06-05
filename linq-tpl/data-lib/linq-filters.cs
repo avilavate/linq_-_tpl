@@ -6,10 +6,11 @@ namespace data_lib
     public class linq_filters
     {
         private List<car> _cars;
-
+        private List<manufacturer> _manufacturer;
         public linq_filters(string path = @"./fuel.csv")
         {
             this._cars = csv_parser.ParseCars(@"./fuel.csv");
+            this._manufacturer = csv_parser.ParseManufacturer();
         }
 
         public List<car> SearchByName(string name)
@@ -76,6 +77,20 @@ namespace data_lib
                  );
 
             return q.OrderByDescending(perfByManu=>perfByManu.Max).ToList();
+        }
+
+        public List<CarManufacturer> JoinManufacturerCar()
+        {
+            var q = from car in this._cars
+                    join m in this._manufacturer on car.Name equals m.Manufacturer
+                    select new CarManufacturer
+                    {
+                        Manufacturer = m.Manufacturer,
+                        Country = m.Country,
+                        Name=car.CarLine+ "" +car.Engin_Displacement,
+                        Economy = car.Combined_FE
+                    };
+            return q.ToList();
         }
     }
 

@@ -18,11 +18,17 @@ namespace data_lib
             {
                 Console.WriteLine(car.Name + " : " + car.Combined_FE);
             }
-            var q1 = ops.PerformanceGroupByManufacturer();
-            foreach (var perfByM in q1)
-            {
-                Console.WriteLine($"{perfByM.Manufacturer} : Avg: {perfByM.Avg} Min: {perfByM.Min} Max: {perfByM.Max}" );
+            //var q1 = ops.PerformanceGroupByManufacturer();
+            //foreach (var perfByM in q1)
+            //{
+            //    Console.WriteLine($"{perfByM.Manufacturer} : Avg: {perfByM.Avg} Min: {perfByM.Min} Max: {perfByM.Max}" );
 
+            //}
+
+            var q1 = ops.JoinManufacturerCar();
+            foreach (var j in q1)
+            {
+                Console.WriteLine($"{j.Manufacturer} from {j.Country} Model {j.Name} Gives {j.Economy} Average");
             }
 
             Console.WriteLine(ops.GetTotal());

@@ -11,3 +11,4 @@ C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\fuel.csv
 C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\data-lib.exe
 C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\data-lib.pdb
 C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\obj\Debug\data-lib.csprojResolveAssemblyReference.cache
+C:\Users\admin\NG2\C#\LinQ\linq_tpl\linq-tpl\data-lib\bin\Debug\manufacturer.cs
