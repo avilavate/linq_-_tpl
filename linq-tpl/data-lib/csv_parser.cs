@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace data_lib
 {
-    internal static class csv_parser
+    public static class csv_parser
     {
         //Model Year,Division,Carline,Eng Displ,# Cyl,City FE,Hwy FE,Comb FE
         public static List<car> ParseCars(string path = @"./fuel.csv")

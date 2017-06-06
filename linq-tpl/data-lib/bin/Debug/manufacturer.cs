@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace data_lib
 {
-    class manufacturer
+   public class manufacturer
     {
         public string Manufacturer { get; set; }
         public string Country { get; set; }
