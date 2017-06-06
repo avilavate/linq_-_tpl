@@ -35,6 +35,9 @@ namespace data_lib
 
             var q2 = ops.GetFuelStatistics();
 
+            xml_parser.CreateCarXML();
+        
+
             Console.WriteLine($"Max: {q1.Max} Min: {q1.Min} Avg: {q1.Avg}");
             Console.WriteLine($"Max: {q2.Max} Min: {q2.Min} Avg: {q2.Avg}");
         //    Console.WriteLine(ops.GetTotal());
