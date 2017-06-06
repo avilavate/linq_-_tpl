@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace data_lib
 {
@@ -127,6 +128,27 @@ namespace data_lib
                     Economy = c.Combined_FE
                 });
             return q1.ToList();
+        }
+
+        public List<car> SearchMostEfficientCarByName(string name,string path = @"cars.xml")
+        {
+            var Cars = XDocument.Load(path);
+            var q = from car in Cars.Element("Cars").Elements("Car")
+                    where car.Element("Name").Value == name
+                    orderby int.Parse(car.Element("Combined_FE").Value) descending
+                    select new car
+                    {
+                        Name = car.Element("Name").Value,
+                        Year = car.Element("Year").Value,
+                        CarLine = car.Element("CarLine").Value,
+                        Engin_Displacement = car.Element("Engin_Displacement").Value,
+                        Cly = int.Parse(car.Element("Cly").Value),
+                        City_FE = int.Parse(car.Element("City_FE").Value),
+                        Highway_FE = int.Parse(car.Element("Highway_FE").Value),
+                        Combined_FE = int.Parse(car.Element("Combined_FE").Value)
+                    };
+
+            return q.ToList();
         }
     }
 
