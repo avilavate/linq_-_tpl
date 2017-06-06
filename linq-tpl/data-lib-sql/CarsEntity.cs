@@ -13,7 +13,7 @@ namespace data_lib_sql
         public CarsEntity()
         {
             this.Database.Log = Console.WriteLine;
-            Database.SetInitializer<CarsEntity>(new DropCreateDatabaseAlways<CarsEntity>());
+          //  Database.SetInitializer<CarsEntity>(new DropCreateDatabaseAlways<CarsEntity>());
         }
         public DbSet<data_lib_sql.car> Cars { get; set; }
 

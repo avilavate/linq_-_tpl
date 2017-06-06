@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="CarsEntity.cs" />
+    <Compile Include="linq-sql-filters.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
