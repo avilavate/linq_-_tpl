@@ -51,7 +51,7 @@ namespace data_lib
             var cars = ops.SearchMostEfficientCarByName("BMW");
             foreach (var car in cars)
             {
-                Console.WriteLine(car.Name + " " +car.CarLine + " : " + car.Combined_FE);
+                Console.WriteLine($"{car.Name, -10} : {car.CarLine, -30} : {car.Combined_FE, -20}");
             }
 
             Console.WriteLine($"Max: {q1.Max} Min: {q1.Min} Avg: {q1.Avg}");
