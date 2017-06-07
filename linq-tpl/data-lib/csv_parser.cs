@@ -15,7 +15,9 @@ namespace data_lib
         {
             //To Test TPL
             //  Thread.Sleep(3000);
+            List<car> CarList = new List<car>();
             var lines = File.ReadAllLines(path);
+           
             var q = lines.
                     Skip(1).
                     Where(l => l.Length > 0).

@@ -30,6 +30,7 @@ namespace data_lib
             //{
             //    Console.WriteLine($"{j.Manufacturer} from {j.Country} Model {j.Name} Gives {j.Economy} Average");
             //}
+            var q0 = ops.SearchByName("BMW");
 
             var q1 = ops.Aggregate();
 
@@ -51,7 +52,15 @@ namespace data_lib
             var cars = ops.SearchMostEfficientCarByName("BMW");
             foreach (var car in cars)
             {
-                Console.WriteLine($"{car.Name, -10} : {car.CarLine, -30} : {car.Combined_FE, -20}");
+                Console.WriteLine($"{car.Name,-10} : {car.CarLine,-30} : {car.Combined_FE,-20}");
+            }
+            Console.WriteLine("-----------------------------------------------");
+            Parallel.ForEach(q0, car =>
+            {
+                Console.WriteLine($"{car.Name,-10} : {car.CarLine,-30} : {car.Combined_FE,-20}");
+            });
+            {
+
             }
 
             Console.WriteLine($"Max: {q1.Max} Min: {q1.Min} Avg: {q1.Avg}");

@@ -17,7 +17,7 @@ namespace data_lib
 
         public List<car> SearchByName(string name)
         {
-            var q = from car in this._cars
+            var q = from car in this._cars.AsParallel()
                     where car.Name == name
                     orderby car.Combined_FE
                     select car;
